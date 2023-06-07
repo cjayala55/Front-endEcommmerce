@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tus compras</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        .bg-white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+    <img class="navbar-brand" src="/img/logo.png" style="width: 50px;" alt="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active" id="">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registrarProducto.html">Vender</a>
+        </li>
+      </ul>
+    </div> 
+    <div class="ml-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item text-light" id ="userLi">
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container p-3  bg-white">
+        <h1 class="text-center">Tus compras</h1>
+        <div class="row">
+            <div class="card">
+                <h5 class="card-header">07/05/2023</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="d-flex flex-row">
+                            <div class="col-2">
+                                <img src="/static/img/Image-folder-amico.svg" alt="">
+                            </div>
+                            <div class="col-10 px-4">
+                                <h4 class="text-success">Productos</h4>
+                                <div id="carrito-list">
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 my-md-1">
+                        <h4 class="text-end" id="totalPrice">$</h4> <!-- Agrega un ID para el elemento h4 -->
+                    </div>
+                    <div class="row mt-3 my-md-1 ">
+                        <div class="d-flex flex-column">
+                            <a href="/templates/purchaseSummary.html" class="btn btn-outline-info align-self-end">comprar</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/carrito.js"></script>
+    <script src="/js/main.js"></script> <!-- Agrega un enlace al archivo JavaScript externo -->
+</body>
+</html>

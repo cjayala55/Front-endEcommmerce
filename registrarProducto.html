@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de producto</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="css/validacion.css">
+	<!-- Custom CSS -->
+	
+</head>
+<body class="min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+    <img class="navbar-brand" src="/img/logo.png" style="width: 50px;" alt="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registrarProducto.html">Vender</a>
+        </li>
+      </ul>
+    </div>
+    <div class="ml-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item" id="userLi">
+         
+        </li>
+      </ul>
+    </div>
+  </nav>
+	<div class="container pt-4">
+		<h1 class="text-center mb-5">Registro de producto</h1>
+		<form enctype="multipart/form-data" id="form" class="card border-dark p-5" action="">
+			<div class="form-group mb-3 row">
+				<label for="nombre" class="col-sm-2 col-form-label">Nombre del producto:</label>
+				<div class="col-sm-10 validate">
+					<input type="text" class="form-control" id="nombre" name="nombre">
+          <div class="error-message">
+            Ingrese el nombre del producto
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="descripcion" class="col-sm-2 col-form-label">Descripción del producto:</label>
+				<div class="col-sm-10 validate">
+					<textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+          <div class="error-message">
+            Ingrese la descripción del producto 
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="marca" class="col-sm-2 col-form-label">Marca:</label>
+				<div class="col-sm-10 validate">
+					<input type="text" class="form-control" id="marca" name="marca">
+          <div class="error-message">
+            Ingrese la marca del producto 
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="codigo" class="col-sm-2 col-form-label">Código EAN:</label>
+				<div class="col-sm-10 validate">
+					<input type="text" class="form-control" id="codigo" name="codigo">
+          <div class="error-message">
+            Ingrese el codigo EAN del producto 
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="unidadesDisponibles" class="col-sm-2 col-form-label">Número de unidades disponibles:</label>
+				<div class="col-sm-10 validate">
+					<input type="number" class="form-control" id="unidadesDisponibles" name="unidadesDisponibles">
+          <div class="error-message">
+            Ingrese la cantidad de unidades disponibles del producto 
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="precio" class="col-sm-2 col-form-label">Precio:</label>
+				<div class="col-sm-10 validate">
+					<input type="number" class="form-control" id="precio" name="precio">
+          <div class="error-message">
+            Ingrese el precio del producto
+          </div>
+				</div>
+			</div>
+			<div class="form-group mb-3 row">
+				<label for="foto" class="col-sm-2 col-form-label">Foto del producto:</label>
+				<div class="col-sm-10">
+					<input type="file" class="form-control-file" id="foto" name="foto" accept="image/*">
+				</div>
+			</div>
+			<div class="form-group mb-3 text-center">
+				<button type="submit" class="btn btn-primary">Registrar</button>
+			</div>
+		</form>
+	</div>
+	<!-- Bootstrap JS and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- Custom JS -->
+	<script  src="/js/script.js"></script>
+  <script  src="/js/validacion.js"></script>
+  <script>
+    (function(){
+      const form = document.getElementById('form');
+      form.addEventListener('submit', event =>{
+        if(!validate()){
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+      });
+    })();
+  </script>
+</body>
+</html>
